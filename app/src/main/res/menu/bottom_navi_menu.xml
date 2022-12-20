@@ -18,4 +18,8 @@
     <item android:title="More"
         android:icon="@drawable/fragment_more"
         android:id="@+id/More"/>
+
+    <item android:title="RecyclerView"
+        android:icon="@drawable/fragment_more"
+        android:id="@+id/RecyclerView"/>
 </menu>

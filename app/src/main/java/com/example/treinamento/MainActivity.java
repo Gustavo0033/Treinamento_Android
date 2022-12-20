@@ -34,14 +34,15 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new DetailFragment());
+        replaceFragment(new HomeFragment());
 
 
 
         binding.bottomNavigationView.setOnItemSelectedListener(item->{
             switch (item.getItemId()){
-                case R.id.recyclerView:
-                    replaceFragment(new MainFragment());
+
+                case R.id.Home:
+                    replaceFragment(new HomeFragment());
                     break;
                 case R.id.Phones:
                     replaceFragment(new PhonesFragment());
@@ -51,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.More:
                     replaceFragment(new MoreFragment());
+                    break;
+                case R.id.RecyclerView:
+                    replaceFragment(new DetailFragment());
                     break;
             }
 
