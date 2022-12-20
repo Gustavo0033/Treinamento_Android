@@ -10,7 +10,6 @@
     <item android:title="Phones"
         android:icon="@drawable/fragment_phones"
         android:id="@+id/Phones"/>
-
     <item android:title="Macbook"
         android:icon="@drawable/fragment_macbook"
         android:id="@+id/Macbook"/>
@@ -19,7 +18,9 @@
         android:icon="@drawable/fragment_more"
         android:id="@+id/More"/>
 
-    <item android:title="RecyclerView"
+    <item android:title="AppleWatch"
         android:icon="@drawable/fragment_more"
-        android:id="@+id/RecyclerView"/>
+        android:id="@+id/AppleWatch"/>
+
+
 </menu>
