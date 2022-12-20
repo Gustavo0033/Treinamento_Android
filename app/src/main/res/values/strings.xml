@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Treinamento</string>
+    <string name="history2">Texto é uma produção, verbal ou não verbal, que se constitui com algum código, no intuito de comunicar algo a alguém, em determinado tempo e espaço. Sua definição ampla se deve ao fato de também abranger diversos formatos.</string>
+    <string name="history">O conceito de texto pode variar a depender da perspectiva teórica adotada para estudá-lo. A palavra texto, ao longo da história, foi ganhando diferentes sentidos, de modo que novas construções foram compreendidas como tal.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Home">Home</string>
+    <string name="Phones">Phones</string>
+    <string name="Macbook">Macbook</string>
+    <string name="More">More</string>
+</resources>
