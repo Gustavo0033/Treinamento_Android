@@ -23,7 +23,7 @@ import java.util.ArrayList;
  * Use the {@link MainFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MainFragment extends Fragment implements RecyclerViewAadapter.ItemClickListener {
+public class MainFragment extends Fragment {
     private ArrayList<DataModel> list = new ArrayList<>();
     public MainFragment() {
         // Required empty public constructor
@@ -58,26 +58,19 @@ public class MainFragment extends Fragment implements RecyclerViewAadapter.ItemC
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
 
         recyclerView.setLayoutManager(layoutManager);
-        RecyclerViewAadapter adapter = new RecyclerViewAadapter(list,this);
+        RecyclerViewAadapter adapter = new RecyclerViewAadapter(list);
         recyclerView.setAdapter(adapter);
 
     }
     public void buildListData(){
-        list.add(new DataModel(("iPhone 14")));
-        list.add(new DataModel(("Interestelar")));
-        list.add(new DataModel(("Monica")));
-        list.add(new DataModel(("Star Wars")));
-    }
+        list.add(new DataModel(("iPhone 14 PRO MAX"),R.drawable.iphone_14));
+        list.add(new DataModel(("iPhone 14"),R.drawable.iphone_14_normal));
+        list.add(new DataModel(("iPhone 13 PRO MAX"),R.drawable.iphone_13_pro_max));
+        list.add(new DataModel(("iPhone 13"),R.drawable.iphone_13___certo));
+        list.add(new DataModel(("iPhone 12"),R.drawable.iphone12));
+        list.add(new DataModel(("iPhone 11"),R.drawable.iphone11));
 
-    @Override
-    public void onItemClick(DataModel dataModel) {
-
-        Fragment fragment = DetailFragment.newInstance(dataModel.getTittle());
-
-        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_container, fragment, "Detail_Fragment");
-        transaction.addToBackStack(null);
-        transaction.commit();
 
     }
+
 }

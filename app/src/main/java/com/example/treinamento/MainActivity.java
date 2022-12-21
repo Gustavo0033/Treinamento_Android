@@ -13,6 +13,7 @@ import android.widget.FrameLayout;
 
 import com.example.treinamento.Fragements.DetailFragment;
 import com.example.treinamento.Fragements.MainFragment;
+import com.example.treinamento.FragmentsNavigation.AppleWatchFragment;
 import com.example.treinamento.FragmentsNavigation.HomeFragment;
 import com.example.treinamento.FragmentsNavigation.MacbookFragment;
 import com.example.treinamento.FragmentsNavigation.MoreFragment;
@@ -30,21 +31,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new DetailFragment());
+        replaceFragment(new HomeFragment());
 
 
 
         binding.bottomNavigationView.setOnItemSelectedListener(item->{
             switch (item.getItemId()){
-                case R.id.recyclerView:
-                    replaceFragment(new MainFragment());
-                    break;
-                case R.id.Phones:
-                    replaceFragment(new PhonesFragment());
+
+                case R.id.Home:
+                    replaceFragment(new HomeFragment());
                     break;
                 case R.id.Macbook:
                     replaceFragment(new MacbookFragment());
@@ -52,6 +52,13 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.More:
                     replaceFragment(new MoreFragment());
                     break;
+                case R.id.Phones:
+                    replaceFragment(new DetailFragment());
+                    break;
+                case R.id.AppleWatch:
+                    replaceFragment(new AppleWatchFragment());
+                    break;
+
             }
 
 

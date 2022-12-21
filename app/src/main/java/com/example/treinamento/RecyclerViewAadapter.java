@@ -9,16 +9,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.imageview.ShapeableImageView;
+
 import java.util.List;
 
 public class RecyclerViewAadapter extends RecyclerView.Adapter<RecyclerViewAadapter.MyViewHolder> {
 
     private List<DataModel> list;
-    private ItemClickListener clickListener;
 
-    public RecyclerViewAadapter(List<DataModel> list, ItemClickListener clickListener){
+    public RecyclerViewAadapter(List<DataModel> list){
     this.list = list;
-    this.clickListener = clickListener;
     }
 
 
@@ -31,14 +31,10 @@ public class RecyclerViewAadapter extends RecyclerView.Adapter<RecyclerViewAadap
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAadapter.MyViewHolder holder, int position) {
-        holder.tittleTextView.setText(list.get(position).getTittle());
 
-    holder.itemView.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-        clickListener.onItemClick(list.get(position));
-        }
-    });
+        holder.tittleTextView.setText(list.get(position).getTittle());
+        holder.imagePhone.setImageResource(list.get(position).getImagePhone());
+
 
     }
 
@@ -49,17 +45,15 @@ public class RecyclerViewAadapter extends RecyclerView.Adapter<RecyclerViewAadap
 
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView tittleTextView;
+        ImageView imagePhone;
 
 
         public MyViewHolder(View view){
             super(view);
 
             tittleTextView = view.findViewById(R.id.tittleTextView);
+            imagePhone = view.findViewById(R.id.imagePhone);
 
         }
-    }
-    public interface ItemClickListener{
-
-        public void onItemClick(DataModel dataModel);
     }
 }

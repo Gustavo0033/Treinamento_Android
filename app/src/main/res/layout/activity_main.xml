@@ -6,35 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="102dp"
+        android:src="@drawable/icon_iphone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:text="@string/Phones"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginLeft="40dp"
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
     <LinearLayout
         android:id="@+id/frame_container"
-        android:layout_width="417dp"
-        android:layout_height="653dp"
+        android:layout_width="411dp"
+        android:layout_height="624dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
+        app:layout_constraintVertical_bias="0.660">
 
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/frame_Layout"
-        android:layout_width="410dp"
-        android:layout_height="848dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+
 
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:layout_width="420dp"
-        android:layout_height="57dp"
+        android:layout_width="408dp"
+        android:layout_height="58dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
