@@ -1,4 +1,4 @@
-package com.example.treinamento;
+package com.example.treinamento.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.material.imageview.ShapeableImageView;
+import com.example.treinamento.DataModel;
+import com.example.treinamento.R;
 
 import java.util.List;
 
@@ -52,7 +53,7 @@ public class RecyclerViewAadapter extends RecyclerView.Adapter<RecyclerViewAadap
             super(view);
 
             tittleTextView = view.findViewById(R.id.tittleTextView);
-            imagePhone = view.findViewById(R.id.imagePhone);
+            imagePhone = view.findViewById(R.id.imageProduct);
 
         }
     }

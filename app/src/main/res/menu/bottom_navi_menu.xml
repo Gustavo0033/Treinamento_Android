@@ -14,13 +14,15 @@
         android:icon="@drawable/fragment_macbook"
         android:id="@+id/Macbook"/>
 
+    <item android:title="AppleWatch"
+        android:icon="@drawable/apple_watch"
+        android:id="@+id/AppleWatch"/>
+
     <item android:title="More"
         android:icon="@drawable/fragment_more"
         android:id="@+id/More"/>
 
-    <item android:title="AppleWatch"
-        android:icon="@drawable/fragment_more"
-        android:id="@+id/AppleWatch"/>
+
 
 
 </menu>
